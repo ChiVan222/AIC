@@ -9,7 +9,7 @@ app = Flask(__name__)
 fe = FeatureExtractor()
 features =  []
 img_path = [ ]
-for features_path in Path("./static/feature").glob("*.npy"): 
+for features_path in Path("./static/feature/L10_V030").glob("*.npy"): 
    features.append(np.load(features_path))
    img_path.append(Path("./static/img")/(features_path.stem + ".jpg" ))
 features = np.array(features)
