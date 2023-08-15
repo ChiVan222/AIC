@@ -27,7 +27,7 @@ def index():
     ids = np.argsort(dists)[:30]
     scores = [(dists[id],img_path[id]) for id in ids]
     print(scores)
-    return render_template("index.html",query_path = uploaded_img_path)
+    return render_template("index.html",query_path = uploaded_img_path,scores = scores)
   else : 
     return render_template("index.html")
 if __name__ =="__main__": 
